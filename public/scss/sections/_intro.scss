@@ -1,0 +1,53 @@
+@use "../components/mixins"as *;
+@use "../custom"as *;
+@use "../components/animations" as *;
+
+a {
+    text-decoration: none;
+}
+
+.intro-section {
+    @include gradient;
+    padding: 10rem 0 0; 
+    width: 100%;
+    height: 100%;
+}
+
+.intros {
+    .typing{
+        color:$rose-light;
+    }
+    @include media-breakpoint-down(md) { 
+        text-align: center;
+    }
+    .video-box {
+        position: relative;
+
+        a {
+            @include position(50%,50%);
+            span {
+                i {
+                    font-size: 6rem;
+                    color: $secondary;
+                }
+            }
+        }
+    }
+}
+
+.border-animation{
+    @include position(0,0);
+    width:6rem;
+    height:6rem;
+    border:.5rem solid $white;
+    border-radius: 50%;
+    animation: pulse-border 1.5s linear infinite;
+    @include pulse;
+
+    &--border-1 {
+        animation-delay: 1s;
+    }
+    &--border-2 {
+        animation-delay: 1.5s;
+    }
+}

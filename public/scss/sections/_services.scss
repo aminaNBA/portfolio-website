@@ -1,0 +1,51 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+.our-services{
+    padding-top: 6rem;
+    .icon{
+        color:$primary;
+    }
+    .heading{
+        @include media-breakpoint-down(md) { 
+            text-align: center;
+        }
+    }
+    .order1{
+        @include media-breakpoint-down(md) { 
+            order:2 !important;
+        }
+    }
+    .order2{
+        @include media-breakpoint-down(md) { 
+            order:1 !important;
+        }
+    }
+    .service{
+        color: $primary;
+        &__btn{
+            border:2px solid $primary;
+            margin-block: 3rem;
+            @include media-breakpoint-down(md) { 
+                margin-bottom: 2rem;
+            }
+            &:hover{
+                border:2px solid $white;
+            }
+        }
+    }
+    .descript{
+        @include media-breakpoint-down(md) { 
+            max-width: 50%;
+            margin:0 auto !important;
+            text-align: center !important;
+         }
+    }
+    img{
+        @include media-breakpoint-up(sm) { 
+           width: 80%;
+        }
+        @include media-breakpoint-down(sm) { 
+            width: 70%;
+         }
+    }
+}

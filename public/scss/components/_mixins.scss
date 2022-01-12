@@ -1,0 +1,28 @@
+@use "../custom"as *;
+
+// BACKGROUND GRADIENT 
+@mixin gradient {
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
+// ABSOLUTE CENTER POSITION
+@mixin position($top,$left) {
+    position: absolute;
+    top: $top;
+    left:$left;
+    transform: translate(-$top, -$left);
+    @content;
+}
+// HEADING LINE FOR TITLE SECTION
+@mixin heading-line($w,$h) {
+    content: "";
+    width: $w;
+    height: $h;
+    display: block;
+    background-color: $primary;
+}
+
+// TRANSITION PROPERTY 
+@mixin transitionProperty {
+    transition-duration: 1s;
+    transition-property: all;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "template2",
+  "version": "1.0.0",
+  "description": "practice bootstrap 5 with sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "template-bootstrap5"
+  },
+  "keywords": [
+    "bootstrap",
+    "sass",
+    "bootstrap-v5",
+    "practice-bootstrap",
+    "practice-scss"
+  ],
+  "author": "MADAT AMINA",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^5.1.3"
+  }
+}

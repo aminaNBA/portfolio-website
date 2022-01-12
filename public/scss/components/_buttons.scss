@@ -1,0 +1,69 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+@use "../components/animations" as *;
+.btn-rounded{
+    @include media-breakpoint-down(md){
+        display: none;
+    }
+    @include media-breakpoint-down(md) { 
+        margin:0 auto;
+    }
+    position:relative;
+    padding:0.8rem 4rem 0.8rem 1rem;
+    background-color: $white;
+    border: .1rem solid $white;
+    // margin: 0;
+    display: block;
+    font-weight: 600;
+    
+    span{
+        position: absolute;
+        background-color: $primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        i{
+            color:$white;
+            line-height: 2.4rem;
+
+        }
+    }
+    &:hover{
+        @include gradient;
+        color:$white;
+        
+        span{
+            background: rgba($black,0.5);
+            i{
+                animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+            }
+            @include shake;
+        }
+    }
+}
+.show-btn{
+    @include media-breakpoint-down(md){
+        display: block !important;
+        margin-top: 3rem !important;
+    }
+}
+.scroll{
+    position:fixed;
+    bottom:1rem;
+    right:-5rem;
+    background-color: $primary;
+    color:$white;
+    border-radius: 50%;
+    padding:6px 13px;
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    cursor:pointer;
+    transition:.3s;
+    z-index: 99;
+    &.show{
+      right:0;
+    }
+  }

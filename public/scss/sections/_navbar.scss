@@ -1,0 +1,37 @@
+@use "../components/mixins" as *;
+@use "../custom" as *;
+
+nav{
+    font-family: 'Syne', sans-serif;
+    .logo{
+        width:150px;
+    }
+}
+
+.menu{
+    @include gradient;
+    li{
+        padding:0 0.7rem;
+        position:relative;
+        &:hover {
+            &::after {
+                width: 100%;
+                right: 0;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            height: .1rem;
+            width: 0;
+            background-color: $white;
+            right: 50%;
+            transition: all .5s;
+        }
+        a{
+            color:$white !important;
+            text-transform: capitalize;
+            font-size: 1.1rem;
+        }
+    }
+}

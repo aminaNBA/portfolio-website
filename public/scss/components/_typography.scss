@@ -1,0 +1,44 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+.display-2 {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+
+    &--intro {
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+        
+    }
+
+    &--description {
+        display: block;
+        margin-top: 1.2rem;
+        text-transform: none;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 1.4rem;
+            display: inline-block;
+
+        }
+    }
+}
+
+// HEADING LINE
+
+.heading-line::before,
+.heading-line::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    background-color: $primary;
+}
+.heading-line::before{
+    @include heading-line(10rem,0.1rem);
+}
+.heading-line::after{
+    @include heading-line(2rem,0.2rem);
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+}
