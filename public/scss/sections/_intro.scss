@@ -14,6 +14,12 @@ a {
 }
 
 .intros {
+    & .display-2--intro{
+        height:20rem;
+        @media screen and (max-width:  768px) { 
+            height:10rem;
+        }
+    }
     .typing{
         color:$rose-light;
     }

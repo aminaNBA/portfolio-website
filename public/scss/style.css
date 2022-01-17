@@ -11470,6 +11470,14 @@ a {
   height: 100%;
 }
 
+.intros .display-2--intro {
+  height: 20rem;
+}
+@media screen and (max-width: 768px) {
+  .intros .display-2--intro {
+    height: 10rem;
+  }
+}
 .intros .typing {
   color: #f43f5e;
 }
